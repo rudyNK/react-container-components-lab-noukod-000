@@ -14,6 +14,7 @@ export default class LatestMovieReviewsContainer extends React.Component {
       reviews: []
     }
   }
+
   fetchReviews = () => {
     fetch(URL)
     .then(response => response.json())
@@ -23,6 +24,7 @@ export default class LatestMovieReviewsContainer extends React.Component {
       })
     })
   }
+
   render() {
     return(
       <div className="latest-movie-reviews">
@@ -30,6 +32,7 @@ export default class LatestMovieReviewsContainer extends React.Component {
       </div>
     )
   }
+
   componentDidMount() {
     this.fetchReviews();
   }
